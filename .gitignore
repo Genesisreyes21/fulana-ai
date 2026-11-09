@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.dev.vars
+config.local.js
+**/config.local.js
+node_modules/
+dist/
+.openai/*.local.*
+.DS_Store
+Icon?
+*.log
+*.tar.gz
+*.zip

@@ -1,0 +1,16 @@
+{
+  "name": "fulana-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A speculative AI boss exploring workplace surveillance and authority.",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/local.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

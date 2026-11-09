@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fulana Inc. Interface</title>
+    <meta name="fulana-hosting" content="server" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <aside class="privacy-note">A fictional AI boss. Camera frames stay in your browser; chat and expression estimates go to the AI service. Voice may use your browser’s speech service or ElevenLabs. Camera and microphone are optional.</aside>
+    <main class="app">
+      <section class="panel left">
+        
+        <div class="ai-figure">
+          <div class="ai-badge">FULANA</div>
+          <div class="ai-embed">
+            <div class="ai-model-frame">
+              <model-viewer
+                class="ai-model-viewer"
+                src="./assets/fulano.glb"
+                alt="Fulana"
+                camera-controls
+                auto-rotate
+                rotation-per-second="18deg"
+                interaction-prompt="none"
+                shadow-intensity="0.8"
+                exposure="1"
+              ></model-viewer>
+            </div>
+          </div>
+          <div class="ai-caption">FULANA</div>
+        </div>
+      </section>
+      <section class="panel right">
+        <div class="webcam-panel">
+          <div class="webcam-header">Webcam</div>
+          <div id="webcam-mount" class="webcam-mount">
+            <div id="webcam-placeholder" class="webcam-placeholder">Camera feed</div>
+          </div>
+        </div>
+        <div class="chat-panel">
+          <div class="chat-header">
+            <div class="chat-title">Fulana Inc.</div>
+            <div class="chat-subtitle">Your fav Startup assistant</div>
+          </div>
+          <div id="chat-output" class="chat-output"></div>
+          <div class="chat-input">
+            <div id="chat-input-mount" class="chat-input-mount"></div>
+            <div id="chat-button-mount" class="chat-button-mount"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
